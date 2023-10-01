@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "kionaregular";
+  src: url("~/assets/fonts/kiona/kiona-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "neue_montrealregular";
+  src: url("~/assets/fonts/neue_montrealregular/neuemontreal-regular-webfont.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+:root {
+  --primary: #1a1818;
+  --secondary: #ece7e1;
+  --medium: #636363;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-size: 10px;
+  font-family: "neue_montrealregular", sans-serif;
+  overflow-x: hidden;
+}
+
+a,
+a span,
+link {
+  outline: none;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+nav {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  font-size: 1.6em;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "kionaregular", sans-serif;
+  z-index: 5;
+}
+
+.list-items,
+nav p {
+  display: flex;
+  transform: rotate(-90deg);
+  gap: 1.3em;
+  margin: 8em 0em 2em 0;
+}
+
+/* .content {
+  flex-grow: 1;
+} */
+
+/* item transformation */
+
+.menu-item {
+  white-space: nowrap;
+  position: relative;
+}
+
+.menu-item .hover-clone {
+  font-style: italic;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.menu-item span {
+  margin-right: 0.2em;
+}
+
+.menu-item:hover > div:nth-child(1) span {
+  transform: translateY(-100%) rotateX(-90deg);
+}
+
+.menu-item > div:nth-child(1) span {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: 0.3s ease;
+  transform-origin: bottom;
+  display: inline-block;
+  /* Définir un délai en fonction de l'index de chaque span */
+  transition-delay: calc(0.05s * (var(--index) + 1));
+}
+
+.menu-item:hover > div:nth-child(2) span {
+  transform: translate(0) rotateX(0);
+}
+
+.menu-item > div:nth-child(2) span {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: 0.3s ease;
+  transition-delay: calc(0.05s * var(--index));
+  transform-origin: top;
+  display: inline-block;
+  transform: translateY(100%) rotateX(-90deg);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .list-items,
+  nav p {
+    display: flex;
+    transform: rotate(0deg);
+    gap: 1.3em;
+    margin: 0;
+    margin: 0em 10px;
+    font-size: 14px;
+  }
+}
