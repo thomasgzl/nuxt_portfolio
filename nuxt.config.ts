@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   app: {
     head: {
-      title: "romain-navoret-portfolio",
+      title: "Thomas 'athmōs' González",
       meta: [{ name: "description", content: "My Portfolio" }],
       link: [
         {

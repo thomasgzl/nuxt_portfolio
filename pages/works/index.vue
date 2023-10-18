@@ -18,19 +18,18 @@
           </div>
         </NuxtLink>
       </div>
-      <p>/2023&copy;</p>
+      <p>///2k23&copy;</p>
     </nav>
     <div class="content">
       <div class="left">
-        <h1>portfolio</h1>
+        <h1>////portfolio</h1>
         <p>
-          These projects serve various purposes, whether for practicing skills,
-          implementing technologies, exploring libraries and frameworks, or
-          simply for fun.
+          These projects serve various purposes, whether for work, practicing skills,
+          implementing technologies, exploring libraries and frameworks.
         </p>
         <p>
           But for each project I pay particular attention to the interaction,
-          animations and performance in order to give to users pleasant ux.
+          design and performance in order to give to users pleasant ux.
         </p>
       </div>
       <div class="right">
@@ -41,7 +40,7 @@
         >
           <NuxtLink :to="'/works/' + project.id" class="project">
             <h2 class="title">{{ project.title }}</h2>
-            <p v-for="technology in project.technologies" class="info">
+            <p v-for="technology in project.technologies" class="info" :key="technology">
               {{ technology }}
             </p>
           </NuxtLink>
@@ -138,7 +137,7 @@ link {
   font-size: 2.5em;
   transform: translateY(2em);
   text-transform: uppercase;
-  font-family: "kionaregular";
+  font-family: "russo-one";
   letter-spacing: 0.2em;
 }
 .left p {
@@ -177,7 +176,7 @@ link {
   font-size: clamp(20px, 7vw, 15em);
   transition: all 0.3s ease;
 
-  font-family: "kionaregular";
+  font-family: "russo-one";
 
   cursor: pointer;
 }

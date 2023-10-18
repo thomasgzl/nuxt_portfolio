@@ -18,17 +18,22 @@
           </div>
         </NuxtLink>
       </div>
-      <p>/2023&copy;</p>
+      <p>///2k23&copy;</p>
     </nav>
     <div class="content">
       <div class="about-me-title">
-        <h1>About</h1>
+        <h1>/About</h1>
       </div>
 
       <div class="about-me-content">
-        <h2><i>Hey !</i> I'm Romain. A web application developer.</h2>
+        <h2><i>Hey !</i> I'm Thomas. A Front-end web developer.</h2>
         <div class="about-me-columns">
           <div class="left">
+            <p>
+              📱In love with computers and new technologies since a long time, 
+              first I went into graphic design, then, being thirsty to learn more, 
+              I started web development, and with my traineeship period I discover mobile development.
+            </p>
             <p>
               I like to create. Getting into web development changed a lot of
               things for me, and since then, I try to push my work to new
@@ -42,16 +47,12 @@
             </p>
           </div>
           <div class="right">
-            <img src="~/assets/images/img.png" alt="picture romain navoret" />
+            <img src="~/assets/images/img.png" alt="picture Thomas Gonzalez" />
           </div>
         </div>
         <p>
-          Since 2022, I have been dedicating 24/7 to developing my skills in
-          this field. Mentored by
-          <a href="https://coder-pour-changer-de-vie.com/" target="_blank"
-            ><i>Nicolas Georgemel</i></a
-          >, backed by 20 years of technic and manage projects experience, I
-          have developed my skills to have a comprehensive view of the developer
+          Since 2019, I have been dedicating time to developing my skills in
+          this field. I have developed my skills to have a comprehensive view of the developer
           profession, project implementation, and allow me to stand on my own
           two feet.
         </p>
@@ -61,20 +62,31 @@
 
           <div class="main-skills">
             <i class="devicon-vuejs-plain"></i>
-            <i class="devicon-nuxtjs-plain"></i>
-            <i class="devicon-django-plain colored"></i>
-            <i class="devicon-postgresql-plain"></i>
+            <i class="devicon-typescript-plain"></i>
+            <i class="devicon-tailwindcss-original-wordmark"></i>
+            <i class="devicon-react-original"></i>
           </div>
+          <div class="main-skills">
+            <i class="devicon-photoshop-plain"></i>
+            <i class="devicon-illustrator-plain"></i>
+            <i class="devicon-figma-plain"></i>
+          </div>
+          <div class="main-skills">
+            <i class="devicon-ubuntu-plain"></i>
+            <i class="devicon-windows8-plain"></i>
+            <i class="devicon-apple-plain"></i>
+          </div>
+
           <div class="secondary-skills">
             <h4>FRAMEWORKS CSS</h4>
-            <p>SCSS / Bulma / Tailwind / Bootstrap</p>
+            <p>SCSS / Tailwind / Bootstrap</p>
             <h4>KNOWLEDGES</h4>
-            <p>POO / Design Patterns / Virtual Box / Agile</p>
+            <p>POO / Design Patterns / Agile</p>
             <h4>DEVOPS</h4>
-            <p>Docker Compose / Kubernetes</p>
+            <p>Docker Compose</p>
             <h4>TOOLS</h4>
             <p>
-              Pycharm / VsCode / Git / PgAdmin / PgModeler / Visual Paradigm /
+              VsCode / Git / GitLab / Insomnia /
               Docker Desktop / Postman
             </p>
           </div>
@@ -105,7 +117,7 @@
           </div>
         </div>
         <p>
-          I usually work with Vue.js for the front and Django for the back. And
+          I usually work with Vue.js. And
           most important: I like to learn. This curiosity drives me to explore
           in-depth my current skills and the next one's, gradually broadening my
           horizon.
@@ -182,7 +194,7 @@ link {
 
 .content h1 {
   font-size: clamp(13em, 15vw, 20em);
-  font-family: "kionaregular";
+  font-family: "russo-one";
   position: relative;
   z-index: 1;
   line-height: 1;

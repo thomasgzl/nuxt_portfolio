@@ -1,15 +1,14 @@
 @font-face {
-  font-family: "kionaregular";
-  src: url("~/assets/fonts/kiona/kiona-regular-webfont.woff2") format("woff2");
+  font-family: "russo-one";
+  src: url("~/assets/fonts/russo/RussoOne-Regular.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "neue_montrealregular";
-  src: url("~/assets/fonts/neue_montrealregular/neuemontreal-regular-webfont.woff2")
-    format("woff2");
+  font-family: "changa";
+  src: url("~/assets/fonts/changa/Changa-VariableFont_wght.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -25,7 +24,7 @@
 
 :root {
   --primary: #1a1818;
-  --secondary: #ece7e1;
+  --secondary: #E6E6FA;
   --medium: #636363;
 }
 
@@ -33,7 +32,7 @@ html,
 body {
   scroll-behavior: smooth;
   font-size: 10px;
-  font-family: "neue_montrealregular", sans-serif;
+  font-family: "changa", sans-serif;
   overflow-x: hidden;
 }
 
@@ -67,7 +66,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  font-family: "kionaregular", sans-serif;
+  font-family: "russo-one", sans-serif;
   z-index: 5;
 }
 

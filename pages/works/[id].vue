@@ -30,6 +30,14 @@
             </h2>
           </div>
           <div v-if="project && project.skills" class="skills">
+            <div v-if="project.skills.software.length" class="skill-box">
+              <h3>software</h3>
+              <ul v-for="softwareSkill in project.skills.software" :key="softwareSkill">
+                <li>
+                  {{ softwareSkill }}
+                </li>
+              </ul>
+            </div>
             <div v-if="project.skills.front.length" class="skill-box">
               <h3>frontend</h3>
               <ul v-for="frontSkill in project.skills.front" :key="frontSkill">
@@ -95,7 +103,7 @@
         <video :src="project.video" autoplay loop muted></video>
         <div class="button-wrapper">
           <a
-            href="https://github.com/romainniamor"
+            href="https://github.com/thomasgzl"
             target="_blank"
             class="menu-item"
           >
@@ -140,12 +148,12 @@
   </div>
 </template>
 <script setup>
+import { useRouter } from "#vue-router";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ref, onMounted, onBeforeUnmount } from "vue";
-import { useDataStore } from "~/store/dataStore";
+import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
-import { useRouter } from "#vue-router";
+import { useDataStore } from "~/store/dataStore";
 
 const route = useRoute();
 const projectId = parseInt(route.params.id, 10);
@@ -227,7 +235,7 @@ link {
   font-size: clamp(3em, 12vw, 25em);
   color: var(--secondary);
   transform: translateY(100%);
-  font-family: "kionaregular";
+  font-family: "russo-one";
 }
 
 .work-presentation {
@@ -249,7 +257,7 @@ link {
 .subtitle h2 {
   font-size: clamp(18px, 2vw, 5em);
   width: 70%;
-  font-family: "kionaregular";
+  font-family: "russo-one";
   line-height: 1.8em;
   text-align: right;
 }

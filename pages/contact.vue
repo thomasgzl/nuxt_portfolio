@@ -18,7 +18,7 @@
           </div>
         </NuxtLink>
       </div>
-      <p>/2023&copy;</p>
+      <p>///2k23&copy;</p>
     </nav>
     <div class="content">
       <div class="title-wrapper"><h1>Hello.</h1></div>
@@ -71,7 +71,7 @@
           Interested in my profile, my work or else?<br />
           Leave me a message, i'll write you back asap.<br />
           <a
-            href="https://www.linkedin.com/in/romain-navoret-559480274/"
+            href="https://www.linkedin.com/in/thomasgzl/"
             target="_blank"
           >
             Or join me on <i class="devicon-linkedin-plain"></i
@@ -85,9 +85,9 @@
 <script setup>
 import { gsap } from "gsap";
 import SplitType from "split-type";
-import { onMounted, ref, computed } from "vue";
+import { computed, onMounted, ref } from "vue";
 
-const name = ref("romainnavoret");
+const name = ref("thomasgonzalez.pro");
 const domain = ref("gmail.com");
 
 const eMail = computed(() => `${name.value}@${domain.value}`);
@@ -165,7 +165,7 @@ link {
 .content h1 {
   font-size: clamp(50px, 14vw, 22em);
   line-height: 1;
-  font-family: "kionaregular";
+  font-family: "russo-one";
 }
 .content h2 {
   font-size: clamp(37px, 3.9vw, 6.3em);

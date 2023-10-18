@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <p>&copy;/2023</p>
+      <p>&copy;///2k23</p>
     </nav>
     <div class="content">
       <h1>{{ error.statusCode }}.</h1>
@@ -33,7 +33,7 @@
 <script setup>
 import { gsap } from "gsap";
 import SplitType from "split-type";
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 
 defineProps(["error"]);
 const handleClearError = () => clearError({ redirect: "/" });
@@ -118,7 +118,7 @@ link {
   position: relative;
   font-size: 25em;
   opacity: 0;
-  font-family: "kionaregular";
+  font-family: "russo-one";
 }
 
 .message-wrapper {

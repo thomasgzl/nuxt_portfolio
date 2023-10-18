@@ -6,7 +6,7 @@
       <div class="list-items">
         <a
           class="menu-item"
-          href="https://github.com/romainniamor"
+          href="https://github.com/thomasgzl"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -29,7 +29,7 @@
         </a>
         <a
           class="menu-item"
-          href="https://www.linkedin.com/in/romain-navoret-559480274/"
+          href="https://www.linkedin.com/in/thomasgzl/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -56,25 +56,30 @@
         </a>
       </div>
 
-      <p>/2023&copy;</p>
+      <p>///2k23&copy;</p>
     </nav>
     <div class="content">
       <div class="left">
-        <h1>romain navoret</h1>
+        <img
+            src="~/assets/images/logo_S.png"
+            alt="project-picture"
+            class="logo"
+          />
+        <h1>////athmōs</h1>
         <div class="header-mask"></div>
 
         <div class="content-mask">
           <p>
-            Web full stack developer Vue.js & Django. Currently available,
+            Web full stack developer Vue.js. Currently available,
             looking for oportunity.
           </p>
         </div>
       </div>
       <div class="right">
         <div class="index-list">
-          <h2><NuxtLink to="/about/">about</NuxtLink></h2>
-          <h2><NuxtLink to="/works/">works</NuxtLink></h2>
-          <h2><NuxtLink to="/contact/">contact</NuxtLink></h2>
+          <h2><NuxtLink to="/about/">/about</NuxtLink></h2>
+          <h2><NuxtLink to="/works/">/works</NuxtLink></h2>
+          <h2><NuxtLink to="/contact/">/contact</NuxtLink></h2>
         </div>
       </div>
     </div>
@@ -164,7 +169,7 @@ link {
   font-size: 2.5em;
   transform: translateY(7.5em);
   text-transform: uppercase;
-  font-family: "kionaregular";
+  font-family: "russo-one";
 }
 .left p {
   font-size: 1.8em;
@@ -179,7 +184,7 @@ link {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  font-family: "kionaregular";
+  font-family: "russo-one";
 }
 
 .index-list {
@@ -205,6 +210,12 @@ link {
   bottom: 0;
   margin: 3px;
   font-size: 1.5em;
+}
+.logo {
+  margin-bottom: 3rem;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 1025px) {
