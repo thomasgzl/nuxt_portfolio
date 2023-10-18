@@ -48,6 +48,7 @@
       </div>
     </div>
   </div>
+  <div class="custom-cursor"></div>
 </template>
 
 <script setup>
@@ -91,12 +92,48 @@ onMounted(() => {
       duration: 1,
       ease: "power4.out",
     });
+
+const cursor = document.querySelector(".custom-cursor");
+const links = document.querySelectorAll("a");
+let isCursorInited = false;
+
+const initCursor = () => {
+  cursor.classList.add("custom-cursor--init");
+  isCursorInited = true;
+};
+
+const destroyCursor = () => {
+  cursor.classList.remove("custom-cursor--init");
+  isCursorInited = false;
+};
+
+links.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    cursor.classList.add("custom-cursor--link");
+  });
+
+  link.addEventListener("mouseout", () => {
+    cursor.classList.remove("custom-cursor--link");
+  });
+});
+
+document.addEventListener("mousemove", (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  if (!isCursorInited) {
+    initCursor();
+  }
+
+  cursor.style = `translate: ${mouseX}px ${mouseY}px`;
+});
+
+document.addEventListener("mouseout", destroyCursor);
 });
 </script>
 
 <style scoped>
 @import "~/assets/css/main.css";
-
 .container {
   background-color: var(--primary);
   color: var(--secondary);
@@ -177,8 +214,6 @@ link {
   transition: all 0.3s ease;
 
   font-family: "russo-one";
-
-  cursor: pointer;
 }
 
 .projects-list .info {
@@ -188,6 +223,35 @@ link {
   position: relative;
   transition: all 1s ease-in-out;
   display: inline-flex;
+}
+
+* {
+  cursor: none;
+}
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  transition-property: transform, scale, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  scale: 0.3;
+  z-index: 10;
+}
+.custom-cursor--link {
+  scale: 1;
+}
+.custom-cursor--init {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1025px) {

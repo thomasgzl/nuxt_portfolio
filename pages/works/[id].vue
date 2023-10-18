@@ -72,21 +72,25 @@
       <div class="image-section">
         <div class="images-wrapper">
           <img
+            v-if="project.image_bg"
             :src="project.image_bg"
             alt="project-picture"
             class="work-image-bg"
           />
           <img
+            v-if="project.image_1"
             :src="project.image_1"
             alt="project-picture"
             class="work-image-overlay overlay-1"
           />
           <img
+            v-if="project.image_2"
             :src="project.image_2"
             alt="project-picture"
             class="work-image-overlay overlay-2"
           />
           <img
+            v-if="project.image_3"
             :src="project.image_3"
             alt="project-picture"
             class="work-image-overlay overlay-3"
@@ -100,7 +104,7 @@
       </div>
 
       <div class="video-wrapper">
-        <video :src="project.video" autoplay loop muted></video>
+        <video v-if="project.video" :src="project.video" autoplay loop muted></video>
         <div class="button-wrapper">
           <a
             href="https://github.com/thomasgzl"
@@ -146,6 +150,7 @@
       </div>
     </div>
   </div>
+  <div class="custom-cursor"></div>
 </template>
 <script setup>
 import { useRouter } from "#vue-router";
@@ -192,10 +197,79 @@ onMounted(() => {
     .to(".overlay-1", { ease: "power3.out", y: 20, x: 40 })
     .to(".overlay-2", { ease: "power3.out", y: 45, x: 65 })
     .to(".overlay-3", { ease: "power3.out", y: 0, rotate: -4 });
+
+const cursor = document.querySelector(".custom-cursor");
+const links = document.querySelectorAll("a");
+let isCursorInited = false;
+
+const initCursor = () => {
+  cursor.classList.add("custom-cursor--init");
+  isCursorInited = true;
+};
+
+const destroyCursor = () => {
+  cursor.classList.remove("custom-cursor--init");
+  isCursorInited = false;
+};
+
+links.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    cursor.classList.add("custom-cursor--link");
+  });
+
+  link.addEventListener("mouseout", () => {
+    cursor.classList.remove("custom-cursor--link");
+  });
+});
+
+document.addEventListener("mousemove", (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  if (!isCursorInited) {
+    initCursor();
+  }
+
+  cursor.style = `translate: ${mouseX}px ${mouseY}px`;
+});
+
+document.addEventListener("mouseout", destroyCursor);
 });
 </script>
 
 <style scoped>
+@import "~/assets/css/main.css";
+
+* {
+  cursor: none;
+}
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  transition-property: transform, scale, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  scale: 0.3;
+  z-index: 10;
+}
+.custom-cursor--link {
+  scale: 1;
+}
+.custom-cursor--init {
+  opacity: 1;
+}
+
+
 a,
 a span,
 link {

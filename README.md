@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# athmōs's portfolio powered by Nuxt
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
