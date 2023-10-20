@@ -78,7 +78,6 @@ export const useDataStore = defineStore({
         image_1: "/esports/img-1.png",
         image_2: "/esports/img-2.png",
         image_3: "/esports/img-3.png",
-        video: "/nodepay/video.mp4",
       },
     ],
   }),

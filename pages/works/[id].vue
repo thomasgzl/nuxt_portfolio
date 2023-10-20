@@ -72,25 +72,21 @@
       <div class="image-section">
         <div class="images-wrapper">
           <img
-            v-if="project.image_bg"
             :src="project.image_bg"
             alt="project-picture"
             class="work-image-bg"
           />
           <img
-            v-if="project.image_1"
             :src="project.image_1"
             alt="project-picture"
             class="work-image-overlay overlay-1"
           />
           <img
-            v-if="project.image_2"
             :src="project.image_2"
             alt="project-picture"
             class="work-image-overlay overlay-2"
           />
           <img
-            v-if="project.image_3"
             :src="project.image_3"
             alt="project-picture"
             class="work-image-overlay overlay-3"
