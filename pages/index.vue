@@ -65,7 +65,7 @@
             alt="project-picture"
             class="logo"
           />
-        <h1>////athmōs</h1>
+        <h1>////thomas gonzalez</h1>
         <div class="header-mask"></div>
 
         <div class="content-mask">
